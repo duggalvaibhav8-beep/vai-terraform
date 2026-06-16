@@ -1,20 +1,20 @@
 // key pair(login)
 resource "aws_key_pair" "my_key" {
 
-  key_name   = "keyPairEC2"
-  public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIGsYWGo5ER4jwkckLbebh6mKsQZo2HVyy35Yboswy+W karanmanhas8488@Karans-MacBook-Air.local"
+  key_name   = "keyPairEC2-endoo"
+  public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK9xLBeET0S4l+0bQy7Zb2jIvnaMIrVoxV00B2xnlac3 user@DESKTOP-DGQ68PF"
 
 }
 
 //VPC and Security group
 
-resource "aws_default_vpc" "karan" {
+resource "aws_default_vpc" "duggal" {
 
 }
 
 resource "aws_security_group" "mySecurityGroup" {
 
-  name        = "mySecurityGroup"
+  name        = "mySecurityGroup-kunj"
   description = "This is my security group"
   vpc_id      = aws_default_vpc.karan.id //interpolation
   tags = {
