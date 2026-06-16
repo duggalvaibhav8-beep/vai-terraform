@@ -16,7 +16,7 @@ resource "aws_security_group" "mySecurityGroup" {
 
   name        = "mySecurityGroup-kunj"
   description = "This is my security group"
-  vpc_id      = aws_default_vpc.karan.id //interpolation
+  data "aws_default_vpc" "default" {}
   tags = {
     Name = "allow_tls"
   }
