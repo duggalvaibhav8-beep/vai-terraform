@@ -1,6 +1,3 @@
-provider "aws" {
-  region = "ap-south-1"
-}
 
 terraform {
 required_providers {
@@ -10,3 +7,8 @@ version = "~> 6.0"
 }
 }
 }
+
+provider "aws" {
+  region = "us-east-1"
+}
+
