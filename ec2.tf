@@ -14,7 +14,7 @@ data "aws_vpc" "default" {
 
 resource "aws_security_group" "mySecurityGroup" {
 
-  name        = "mySecurityGroup-kunj"
+  name        = "mySecurityGroup-kunj-2"
   description = "This is my security group"
   vpc_id      = data.aws_vpc.default.id
   tags = {
