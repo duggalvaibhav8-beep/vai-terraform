@@ -24,6 +24,20 @@ jobs:
     
     - name: terraform plan 
       run:  terraform plan
-            
+
+    - name: Show Terraform Version
+      run: terraform version
+
+    - name: Show AWS Identity
+      run: aws sts get-caller-identity
+
     - name: terraform Apply
       run:  terraform apply -auto-approve
+      
+    - name: Enable Terraform Debug Logs
+      run: terraform apply -auto-approve
+      env:
+          TF_LOG: DEBUG
+          
+
+  
