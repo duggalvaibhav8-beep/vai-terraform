@@ -31,6 +31,13 @@ jobs:
     - name: Show AWS Identity
       run: aws sts get-caller-identity
 
+    - name: AWS EC2 Dry Run
+      run: |
+         aws ec2 run-instances \
+           --image-id ami-07a00cf47dbbc844c \
+           --instance-type t3.micro \
+           --dry-run
+
     - name: terraform Apply
       run:  terraform apply -auto-approve
       
