@@ -1,7 +1,7 @@
 // key pair(login)
 resource "aws_key_pair" "my_key" {
 
-  key_name   = "keyPairEC2-newsss-33"
+  key_name   = "keyPairEC2-newsss-334"
   public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK9xLBeET0S4l+0bQy7Zb2jIvnaMIrVoxV00B2xnlac3 user@DESKTOP-DGQ68PF"
 
 }
@@ -14,7 +14,7 @@ data "aws_vpc" "default" {
 
 resource "aws_security_group" "mySecurityGroup" {
 
-  name        = "mySecurityGroup-kunj-33"
+  name        = "mySecurityGroup-kunj-334"
   description = "This is my security group"
   vpc_id      = data.aws_vpc.default.id
   tags = {
